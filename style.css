@@ -2,6 +2,7 @@
 * {
     text-align: center;
     margin: 0;
+    transition: font-size 0.5s;
 }
 
 body {

@@ -9,11 +9,11 @@ convertBtn.addEventListener('click', () => {
     if (URLinput.value.includes("youtu") && URLinput.value.includes("://") && URLinput.value.includes("watch")) {
         sendURL(URLinput.value, ext.value)
     } else {
-        URLinput.placeholder = "No URL provided!"
+        document.getElementById("heading").innerHTML = "No URL provided!"
         setTimeout(() => {
             convertBtn.style.opacity = "unset"
             convertBtn.style.pointerEvents = "unset"
-            URLinput.placeholder = "Paste a YouTube URL here"
+            document.getElementById("heading").innerHTML = "SaveTube"
         }, 2000)
     }
 })

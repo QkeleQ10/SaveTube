@@ -18,7 +18,7 @@ app.get("/download", async (req, res) => {
         else filter = "videoandaudio"
         res.header("Content-Disposition", `attachment; filename="download.${ext}"`)
         ytdl(URL, { format: ext, filter: filter, }).pipe(res)
-    } catch (err) { throw err }
+    } catch (err) { throw new Error('BROKEN') }
 })
 
 app.get("/", function (req, res) {
