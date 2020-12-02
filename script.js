@@ -1,5 +1,3 @@
-const document = require("./index.html")
-
 var convertBtn = document.getElementById('convert-button')
 var URLinput = document.getElementById('URL-input')
 var ext = document.getElementById('extension')
