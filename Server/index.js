@@ -15,9 +15,6 @@ app.get('/download', async (req, res) => {
     var filter
     if (ext === "mp3") filter = "audioonly"
     else filter = "videoandaudio"
-
     res.header('Content-Disposition', `attachment; filename="download.${ext}"`)
-
-    ytdl(URL, { format: ext, filter: filter, })
-        .pipe(res)
+    ytdl(URL, { format: ext, filter: filter, }).pipe(res)
 })
