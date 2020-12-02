@@ -8,5 +8,5 @@ convertBtn.addEventListener('click', () => {
 })
 
 function sendURL(URL, ext) {
-    window.location.href = `http://localhost:4000/download?URL=${URL}&ext=${ext}`
+    window.location.href = `https://savetube.herokuapp.com/download?URL=${URL}&ext=${ext}`
 }

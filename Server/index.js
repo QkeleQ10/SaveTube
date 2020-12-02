@@ -6,7 +6,7 @@ const app = express()
 app.use(cors())
 
 app.listen(4000, () => {
-    console.log('Server Works !!! At port 4000')
+    console.log('Server online at port 4000')
 })
 
 app.get('/download', async (req, res) => {
