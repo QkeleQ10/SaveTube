@@ -1,5 +1,22 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap");
 * {
     text-align: center;
+    margin: 0;
+}
+
+body {
+    background: #333533;
+    font-family: 'Montserrat', arial, sans-serif;
+    font-weight: 500;
+}
+
+h1 {
+    color: #93d996;
+    font-size: clamp(25px, 10vw, 120px);
+    font-weight: 500;
+    vertical-align: middle;
+    grid-column-start: 1;
+    grid-column-end: 4;
 }
 
 div {
@@ -7,14 +24,19 @@ div {
     gap: 10px;
     justify-content: center;
     align-items: center;
-}
-
-.heading {
-    font-family: Arial;
-    margin-top: 40vh;
+    width: 100vw;
+    height: 100px;
+    position: absolute;
+    top: 0;
+    bottom: 100px;
+    left: 0;
+    right: 0;
+    margin: auto;
 }
 
 #URL-input, #convert-button, #extension {
+    font-family: 'Montserrat', arial, sans-serif;
+    font-weight: 400;
     font-size: 1.3em;
     padding: 5px 10px;
     border-radius: 4px;
@@ -29,11 +51,11 @@ div {
 }
 
 #URL-input:focus, #extension:focus {
-    border: 2px solid #0485ff;
+    border: 2px solid #93d996;
 }
 
 #convert-button {
-    border: 2px solid #0485ff;
-    background: #0485ff;
-    color: white;
+    border: 2px solid #93d996;
+    background: #93d996;
+    color: #333533;
 }
