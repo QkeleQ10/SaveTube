@@ -17,10 +17,10 @@ div {
 #URL-input, #convert-button, #extension {
     font-size: 1.3em;
     padding: 5px 10px;
+    border-radius: 4px;
 }
 
 #URL-input, #extension {
-    border-radius: 4px 0px 0px 4px;
     width: 30em;
     text-align: left;
     border: 2px solid #EEEEEE;
@@ -33,7 +33,6 @@ div {
 }
 
 #convert-button {
-    border-radius: 0px 4px 4px 0px;
     border: 2px solid #0485ff;
     background: #0485ff;
     color: white;
