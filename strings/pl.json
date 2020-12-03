@@ -1,7 +1,7 @@
 {
-    "invURL": "No URL provided!",
-    "Paste a YouTube URL here": "Paste a YouTube URL here",
-    "Video and audio": "Video and audio",
-    "Just audio": "Just audio",
-    "Convert": "Convert"
+    "invURL": "Invalid URL!",
+    "Paste a YouTube URL here": "Tutaj wklej link do filmu z YouTube",
+    "Video and audio": "Obraz i Dźwięk",
+    "Just audio": "Tylko audio",
+    "Convert": "Konwertuj"
 }
