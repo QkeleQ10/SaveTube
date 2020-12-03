@@ -1,7 +1,7 @@
 {
-    "invURL": "No URL provided!",
-    "Paste a YouTube URL here": "Paste a YouTube URL here",
-    "Video and audio": "Video and audio",
-    "Just audio": "Just audio",
-    "Convert": "Convert"
+    "invURL": "Virheellinen URL-osoite!",
+    "Paste a YouTube URL here": "Liitä Youtube-videon URL-osoite tähän",
+    "Video and audio": "Video ja ääni",
+    "Just audio": "Vain ääni",
+    "Convert": "Muuta"
 }
