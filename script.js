@@ -21,7 +21,7 @@ convertBtn.addEventListener('click', () => {
     convertBtn.style.opacity = "0.5"
     convertBtn.style.pointerEvents = "none"
 
-    if (URLinput.value.includes("youtu") && URLinput.value.includes("://") && URLinput.value.includes("/")) {
+    if (URLinput.value.includes("youtu") && URLinput.value.includes("://")) {
         sendURL(URLinput.value, ext.value)
     } else {
         document.getElementById("heading").innerHTML = strings.noURL
