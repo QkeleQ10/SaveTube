@@ -21,10 +21,10 @@ convertBtn.addEventListener('click', () => {
     convertBtn.style.opacity = "0.5"
     convertBtn.style.pointerEvents = "none"
 
-    if (URLinput.value.includes("youtu") && URLinput.value.includes("://")) {
+    if (URLinput.value.includes("youtu") && URLinput.value.includes("://") && URLinput.value.length >= 18) {
         sendURL(URLinput.value, ext.value)
     } else {
-        document.getElementById("heading").innerHTML = strings.noURL
+        document.getElementById("heading").innerHTML = strings.invURL
         setTimeout(() => {
             convertBtn.style.opacity = "unset"
             convertBtn.style.pointerEvents = "unset"
