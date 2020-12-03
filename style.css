@@ -2,7 +2,6 @@
 * {
     text-align: center;
     margin: 0;
-    transition: font-size 0.5s;
 }
 
 body {
@@ -11,36 +10,61 @@ body {
     font-weight: 500;
 }
 
-h1 {
-    color: #93d996;
-    font-size: clamp(25px, 10vw, 120px);
-    font-weight: 500;
-    vertical-align: middle;
-    grid-column-start: 1;
-    grid-column-end: 4;
-}
-
-div {
-    display: grid;
-    gap: 10px;
+#h {
+    display: flex;
+    margin-top: 50px;
     justify-content: center;
     align-items: center;
-    width: 100vw;
-    height: 100px;
+    gap: clamp(5px, 2vw, 60px);
+}
+
+#g {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 50px;
+}
+
+img {
+    height: clamp(35px, 10vw, 120px);
+}
+
+h1 {
+    color: #93d996;
+    font-size: clamp(30px, 8vw, 105px);
+    font-weight: 500;
+}
+
+p {
+    margin-top: 50px;
+    color: rgba(255, 255, 255, 0.2);
+}
+
+#convertbuttonimg {
+    height: clamp(10px, 0.8vw, 30px);
+    transform: rotate(-45deg);
+}
+
+#credit {
     position: absolute;
-    top: 0;
-    bottom: 100px;
-    left: 0;
-    right: 0;
-    margin: auto;
+    left: 5px;
+    top: 5px;
+    margin: 0;
+    font-size: clamp(12px, 0.8vw, 30px);
 }
 
 #URL-input, #convert-button, #extension {
     font-family: 'Montserrat', arial, sans-serif;
     font-weight: 400;
-    font-size: 1.3em;
+    font-size: clamp(15px, 1vw, 40px);
     padding: 5px 10px;
     border-radius: 4px;
+    margin: 5px;
+    box-sizing: border-box;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 #URL-input, #extension {
