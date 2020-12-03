@@ -21,7 +21,7 @@ convertBtn.addEventListener('click', () => {
     convertBtn.style.opacity = "0.5"
     convertBtn.style.pointerEvents = "none"
 
-    if (URLinput.value.includes("youtu") && URLinput.value.includes("://") && URLinput.value.length >= 18) {
+    if (/^(http(s)?:\/\/)?((w){3}.)?youtu(be|.be)?(\.com)?\/.+/igm.test(URLinput.value) && URLinput.value.length >= 18) {
         sendURL(URLinput.value, ext.value)
     } else {
         document.getElementById("heading").innerHTML = strings.invURL
