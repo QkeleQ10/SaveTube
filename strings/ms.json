@@ -1,7 +1,8 @@
 {
-    "invURL": "Invalid URL!",
-    "Paste a YouTube URL here": "Tampal URL youtube disini",
+    "invURL": "URL tidak sah!",
+    "Paste a YouTube URL here": "Tampal URL YouTube disini",
     "Video and audio": "Video Dan audio",
     "Just audio": "Hanya audio",
+    "Just video": "Just video",
     "Convert": "Ubah"
 }
