@@ -25,10 +25,13 @@
 </head>
 
 <body>
-    <div id="h">
-        <img src="svg.svg">
-        <h1 id="heading">SaveTube</h1>
-    </div>
+    <h1 id="heading"
+        style="display: flex; margin-top: 50px; justify-content: center; align-items: center; gap: clamp(5px, 2vw, 60px);">
+        <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 4000 4000"
+            style="height: clamp(35px, 10vw, 120px);">
+            <path
+                d="M3913.68,1194.83C3872.53,1011.12,3672,841.08,3488.16,822a15416.91,15416.91,0,0,0-2976.32,0C328,841.08,127.47,1011.12,86.32,1194.83q-172.63,805.17,0,1610.34C127.47,2988.88,328,3158.92,511.84,3178a15416.91,15416.91,0,0,0,2976.32,0c183.83-19.08,384.37-189.13,425.52-372.84Q4086.32,2000,3913.68,1194.83ZM2000,2791l-808.8-808.8,232.4-232.4,412.07,412.06V1209h328.66v952.84l412.07-412.06,232.4,232.4Z" />
+        </svg> SaveTube</h1>
     <div id="g">
         <input id="URL-input" placeholder="Paste a YouTube URL here" class="l18nP">
         <select id="extension">
@@ -36,21 +39,29 @@
             <option value="mp3" class="l18n">Just audio</option>
         </select>
         <button id="convert-button">
-            <img id="convert-button-img" class="button-img" src="svgArrow.svg"> <span class="l18n">Convert</span>
+            <svg xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 4000 4000"
+                style="height: clamp(10px, 0.8vw, 30px); transform: rotate(-45deg);">
+                <polygon
+                    points="3425.32 1381.28 2406.36 2400.23 2406.36 44.04 1593.64 44.04 1593.64 2400.23 574.68 1381.28 0 1955.96 2000 3955.96 4000 1955.96 3425.32 1381.28" />
+            </svg> <span class="l18n">Convert</span>
         </button>
     </div>
     <p class="l18n">There will eventually be more content on this page.</p>
 
     <p id="credit">Quinten Althues 2020</p>
-    <button class="lang-button" class="l18n" onclick="document.getElementById('lang-b').style.display='unset'"
+
+    <!--<button class="lang-button" class="l18n" onclick="document.getElementById('lang-b').style.display='unset'"
         style="position: absolute; right: 5px; top: 5px;">
-        <img class="button-img" src="svgLanguage.svg"> <span class="l18n">Language</span>
+        <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 4000 4000"
+            style="height: clamp(10px, 0.8vw, 30px);">
+            <path d="M3200,800V2764.94l-383.94-172L2660,2523H800V800H3200M4000,0H0V3323H2489l1511,677V0Z" />
+        </svg> <span class="l18n">Language</span>
     </button>
     <div style="display: none;" id="lang-b">
         <div>
             <button class="lang-button">Dutch</button>
         </div>
-    </div>
+    </div>-->
 </body>
 
 </html>

@@ -1,11 +1,27 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap");
+:root {
+    --foreground: #6b6e6b;
+    --background: #f7f7f7;
+    --accent: #629464;
+    --transparent: #33353380;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --foreground: #EEEEEE;
+        --background: #333333;
+        --accent: #93d996;
+        --transparent: #EEEEEE80;
+    }
+}
+
 * {
     text-align: center;
     margin: 0;
 }
 
 body {
-    background: #333533;
+    background: var(--background);
     font-family: 'Montserrat', arial, sans-serif;
     font-weight: 500;
 }
@@ -26,19 +42,15 @@ body {
     margin-top: 50px;
 }
 
-img {
-    height: clamp(35px, 10vw, 120px);
-}
-
 h1 {
-    color: #93d996;
+    color: var(--accent);
     font-size: clamp(30px, 8vw, 105px);
     font-weight: 500;
 }
 
 p {
     margin-top: 50px;
-    color: rgba(255, 255, 255, 0.2);
+    color: var(--transparent);
 }
 
 #credit {
@@ -53,37 +65,38 @@ input, button, select {
     font-family: 'Montserrat', arial, sans-serif;
     font-weight: 400;
     font-size: clamp(15px, 1vw, 40px);
-    padding: 5px 10px;
+    padding: 10px 15px;
     border-radius: 4px;
     margin: 5px;
     box-sizing: border-box;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
-    transition: box-shadow 0.2s;
+    transition: box-shadow 0.2s, border 0.2s;
 }
 
 input:hover, button:hover, select:hover {
-    box-shadow: 0px 0px 8px 0px #93d996;
+    border: 1px solid var(--accent);
 }
 
 input:focus, button:focus, select:focus {
-    box-shadow: 0px 0px 8px 2px #EEEEEE;
+    box-shadow: 0px 0px 0px 3px #93d99670;
     outline: none;
 }
 
 input, select {
     width: 30em;
     text-align: left;
-    border: 2px solid #EEEEEE;
-    background: #EEEEEE;
+    border: 1px solid var(--foreground);
+    background: transparent;
+    color: var(--foreground);
     outline: none;
 }
 
 button {
-    border: 2px solid #93d996;
-    background: #93d996;
-    color: #333533;
+    border: 1px solid var(--accent);
+    background: var(--accent);
+    color: var(--background);
     cursor: pointer;
 }
 
@@ -91,25 +104,17 @@ select {
     cursor: pointer;
 }
 
-.button-img {
-    height: clamp(10px, 0.8vw, 30px);
-}
-
-#convert-button-img {
-    transform: rotate(-45deg);
-}
-
 .lang-button {
-    background: #333533;
-    color: #93d996;
+    background: transparent;
+    color: var(--foreground);
     margin: 0;
 }
 
 #lang-b {
     display: flex;
     gap: 10px;
-    background: #00000080;
-    color: #93d996;
+    background: var(--transparent);
+    color: var(--accent);
     position: absolute;
     right: 0;
     bottom: 0;
@@ -117,4 +122,8 @@ select {
     height: 100vh;
     margin: 0;
     border-radius: 4px;
+}
+
+svg {
+    fill: currentColor;
 }
