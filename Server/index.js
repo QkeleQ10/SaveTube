@@ -23,9 +23,9 @@ app.get("/download", async (req, res) => {
         if (f === "a") {
             ytdl(URL, { format: ext, filter: "audioonly", quality: "highestaudio" }).pipe(res)
         } else if (f === "v") {
-            ytdl(URL, { format: ext, filter: "videoonly", quality: "highestvidio" }).pipe(res)
+            ytdl(URL, { format: ext, filter: "videoonly", quality: "highestvideo" }).pipe(res)
         } else {
-            ytdl(URL, { format: ext, filter: "videoandaudio", quality: "highestvidio" }).pipe(res)
+            ytdl(URL, { format: ext, filter: "videoandaudio", quality: "highestvideo" }).pipe(res)
         }
     } catch (err) {
         res.send({ err: err })
