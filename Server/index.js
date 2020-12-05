@@ -51,7 +51,7 @@ app.get("/download", async (req, res) => {
             video.pipe(ffmpegProcess.stdio[5])
             ffmpegProcess.stdio[6].pipe(res) // Combining and piping the streams for download directly to the response
         }
-    } catch (err) { throw new Error('BROKEN') }
+    } catch (err) { throw err }
 })
 
 app.get("/", function (req, res) {
