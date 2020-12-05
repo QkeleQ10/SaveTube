@@ -13,47 +13,19 @@ app.listen(process.env.PORT || 4000, () => {
 app.get("/download", async (req, res) => {
     try {
         var URL = req.query.URL
-        var ext = req.query.ext
+        var f = req.query.ext
+        var ext
+        if (f === "va") ext = "mp4"
+        if (f === "a") ext = "mp3"
+        if (f === "v") ext = "mp4"
 
         res.header("Content-Disposition", `attachment; filename="download.${ext}"`)
-        if (ext === "mp3") {
+        if (f === "a") {
             ytdl(URL, { format: ext, filter: "audioonly", quality: "highestaudio" }).pipe(res)
+        } else if (f === "v") {
+            ytdl(URL, { format: ext, filter: "videoonly", quality: "highestvidio" }).pipe(res)
         } else {
-            /*const video = ytdl(URL, { filter: 'videoonly' });
-            const audio = ytdl(URL, { filter: 'audioonly', highWaterMark: 1 << 25 });
-            // Start the ffmpeg child process
-            const ffmpegProcess = cp.spawn(ffmpeg, [
-                // Remove ffmpeg's console spamming
-                '-loglevel', '0', '-hide_banner',
-                '-i', 'pipe:4',
-                '-i', 'pipe:5',
-                '-reconnect', '1',
-                '-reconnect_streamed', '1',
-                '-reconnect_delay_max', '4',
-                // Rescale the video
-                '-vf', 'scale=1980:1080',
-                // Choose some fancy codes
-                '-c:v', 'libx265', '-x265-params', 'log-level=0',
-                '-c:a', 'flac',
-                // Define output container
-                '-f', 'matroska', 'pipe:6',
-            ], {
-                windowsHide: true,
-                stdio: [
-                    /* Standard: stdin, stdout, stderr * /
-                    'inherit', 'inherit', 'inherit',
-                    /* Custom: pipe:4, pipe:5, pipe:6 * /
-                    'pipe', 'pipe', 'pipe',
-                ],
-            });
-
-            audio.pipe(ffmpegProcess.stdio[4])
-            video.pipe(ffmpegProcess.stdio[5])
-            ffmpegProcess.stdio[6].pipe(res) // Combining and piping the streams for download directly to the response*/
-
-            new FFmpeg({ source: await ytdl(URL, { filter: 'videoonly' }) })
-                .addInput({ source: ytdl(URL, { filter: 'audioonly', highWaterMark: 1 << 25 }) })
-                .pipe(res)
+            ytdl(URL, { format: ext, filter: "videoandaudio", quality: "highestvidio" }).pipe(res)
         }
     } catch (err) {
         res.send({ err: err })
