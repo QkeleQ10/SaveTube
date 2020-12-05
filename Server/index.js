@@ -1,7 +1,7 @@
 const express = require('express')
 const cors = require('cors')
 const ytdl = require('ytdl-core')
-const ffmpeg = require('ffmpeg')
+const FFmpeg = require('ffmpeg')
 const app = express()
 
 app.use(cors())
@@ -19,7 +19,7 @@ app.get("/download", async (req, res) => {
         if (ext === "mp3") {
             ytdl(URL, { format: ext, filter: "audioonly", quality: "highestaudio" }).pipe(res)
         } else {
-            const video = ytdl(URL, { filter: 'videoonly' });
+            /*const video = ytdl(URL, { filter: 'videoonly' });
             const audio = ytdl(URL, { filter: 'audioonly', highWaterMark: 1 << 25 });
             // Start the ffmpeg child process
             const ffmpegProcess = cp.spawn(ffmpeg, [
@@ -40,16 +40,20 @@ app.get("/download", async (req, res) => {
             ], {
                 windowsHide: true,
                 stdio: [
-                    /* Standard: stdin, stdout, stderr */
+                    /* Standard: stdin, stdout, stderr * /
                     'inherit', 'inherit', 'inherit',
-                    /* Custom: pipe:4, pipe:5, pipe:6 */
+                    /* Custom: pipe:4, pipe:5, pipe:6 * /
                     'pipe', 'pipe', 'pipe',
                 ],
             });
 
             audio.pipe(ffmpegProcess.stdio[4])
             video.pipe(ffmpegProcess.stdio[5])
-            ffmpegProcess.stdio[6].pipe(res) // Combining and piping the streams for download directly to the response
+            ffmpegProcess.stdio[6].pipe(res) // Combining and piping the streams for download directly to the response*/
+
+            new FFmpeg({ source: await ytdl(URL, { filter: 'videoonly' }) })
+                .addInput({ source: ytdl(URL, { filter: 'audioonly', highWaterMark: 1 << 25 }) })
+                .pipe(res)
         }
     } catch (err) {
         res.send({ err: err })
