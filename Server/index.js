@@ -19,8 +19,8 @@ app.get("/download", async (req, res) => {
         if (ext === "mp3") {
             ytdl(URL, { format: ext, filter: "audioonly", quality: "highestaudio" }).pipe(res)
         } else {
-            const video = ytdl(url, { filter: 'videoonly' });
-            const audio = ytdl(url, { filter: 'audioonly', highWaterMark: 1 << 25 });
+            const video = ytdl(URL, { filter: 'videoonly' });
+            const audio = ytdl(URL, { filter: 'audioonly', highWaterMark: 1 << 25 });
             // Start the ffmpeg child process
             const ffmpegProcess = cp.spawn(ffmpeg, [
                 // Remove ffmpeg's console spamming
