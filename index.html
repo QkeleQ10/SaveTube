@@ -28,11 +28,22 @@
             <option value="mp4" class="l18n">Video and audio</option>
             <option value="mp3" class="l18n">Just audio</option>
         </select>
-        <button id="convert-button"><img id="convertbuttonimg" src="svgArrow.svg"> <span
-                class="l18n">Convert</span></button>
+        <button id="convert-button">
+            <img id="convert-button-img" class="button-img" src="svgArrow.svg"> <span class="l18n">Convert</span>
+        </button>
     </div>
     <p class="l18n">There will eventually be more content on this page.</p>
+
     <p id="credit">Quinten Althues 2020</p>
+    <button class="lang-button" class="l18n" onclick="document.getElementById('lang-b').style.display='unset'"
+        style="position: absolute; right: 5px; top: 5px;">
+        <img class="button-img" src="svgLanguage.svg"> <span class="l18n">Language</span>
+    </button>
+    <div style="display: none;" id="lang-b">
+        <div>
+            <button class="lang-button">Dutch</button>
+        </div>
+    </div>
 </body>
 
 </html>
