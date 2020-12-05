@@ -20,7 +20,7 @@ app.get("/download", async (req, res) => {
             quality = "highestaudio"
         } else {
             filter = "videoandaudio"
-            quality = "highest"
+            quality = "highestvideo"
         }
 
         res.header("Content-Disposition", `attachment; filename="download.${ext}"`)
