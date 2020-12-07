@@ -1,5 +1,10 @@
 {
-    "invURL": "Ongeldige URL!",
+    "e": {
+        "inv": "Invalid URL.",
+        "none": "No URL provided.",
+        "unav": "That video is unavailable.",
+        "e": "An unknown error occurred."
+    },
     "Paste a YouTube URL here": "Plak hier een YouTube-URL",
     "Video and audio": "Beeld en geluid",
     "Just audio": "Alleen geluid",
