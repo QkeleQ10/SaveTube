@@ -3,6 +3,7 @@
     --foreground: #6b6e6b;
     --background: #f7f7f7;
     --accent: #629464;
+    --error: #b1563f;
     --transparent: #33353380;
 }
 
@@ -11,6 +12,7 @@
         --foreground: #EEEEEE;
         --background: #333333;
         --accent: #93d996;
+        --error: #ee4a22;
         --transparent: #EEEEEE80;
     }
 }
@@ -18,20 +20,13 @@
 * {
     text-align: center;
     margin: 0;
+    transition: max-height 0.25s;
 }
 
 body {
     background: var(--background);
     font-family: 'Montserrat', arial, sans-serif;
     font-weight: 500;
-}
-
-#h {
-    display: flex;
-    margin-top: 50px;
-    justify-content: center;
-    align-items: center;
-    gap: clamp(5px, 2vw, 60px);
 }
 
 #g {
@@ -48,9 +43,32 @@ h1 {
     font-weight: 500;
 }
 
-p {
+#ph, #credit {
     margin-top: 50px;
     color: var(--transparent);
+}
+
+.toast {
+    display: flex;
+    max-height: 50px;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+#error {
+    width: 30em;
+    color: var(--background);
+    background-color: var(--error);
+    padding: 10px 15px;
+    border-radius: 4px;
+    margin: 5px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 #credit {
@@ -126,4 +144,8 @@ select {
 
 svg {
     fill: currentColor;
+}
+
+.collapsed {
+    max-height: 0px;
 }
