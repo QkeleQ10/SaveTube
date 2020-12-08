@@ -1,0 +1,13 @@
+{
+    "e": {
+        "inv": "URL inválido.",
+        "none": "Não colocaste nenhum URL.",
+        "unav": "Esse vídeo não está disponível.",
+        "e": "Ocorreu um erro desconhecido."
+    },
+    "Paste a YouTube URL here": "Cola um URL do YouTube aqui",
+    "Video and audio": "Vídeo e áudio",
+    "Just audio": "Apenas o áudio",
+    "Just video": "Apenas o vídeo",
+    "Convert": "Converter"
+}
