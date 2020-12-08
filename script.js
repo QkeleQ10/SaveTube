@@ -1,8 +1,9 @@
-var convertBtn = document.getElementById('convert-button')
-var URLinput = document.getElementById('URL-input')
-var ext = document.getElementById('extension')
+const convertBtn = document.getElementById('convert-button')
+const URLinput = document.getElementById('URL-input')
+const ext = document.getElementById('extension')
+let strings = {}
 
-strings(1)
+gstrings(1)
 
 convertBtn.addEventListener('click', () => {
     convertBtn.style.opacity = "0.5"
@@ -14,6 +15,10 @@ convertBtn.addEventListener('click', () => {
         document.getElementById("toast1").classList.remove("collapsed")
         if (strings.e) document.getElementById("error").innerHTML = strings.e.inv || "Invalid URL."
         else document.getElementById("error").innerHTML = "Invalid URL."
+        if (URLinput.value.length < 1) {
+            if (strings.e) document.getElementById("error").innerHTML = strings.e.none || "No URL provided."
+            else document.getElementById("error").innerHTML = "No URL provided."
+        }
         setTimeout(() => {
             convertBtn.style.opacity = "unset"
             convertBtn.style.pointerEvents = "unset"
@@ -30,14 +35,14 @@ function sendURL(URL, ext) {
     }, 10000)
 }
 
-function strings(t) {
+async function gstrings(t) {
     let langCookie = document.cookie.split("lang=")[1]
     if (langCookie) langCookie = langCookie.split(";")[0]
     let langCode = langCookie || window.navigator.language || "en"
     if (t > 1) langCode = window.navigator.language.split("-")[0] || "en"
+    if (t > 2) langCode = "en"
     let requestURL = "https://qkeleq10.github.io/SaveTube/strings/" + langCode + ".json"
     let request = new XMLHttpRequest()
-    let strings = {}
     request.open('GET', requestURL)
     request.responseType = 'json'
     request.send()
@@ -47,6 +52,6 @@ function strings(t) {
         document.querySelectorAll(".l18nP").forEach(e => e.placeholder = strings[e.placeholder] || e.placeholder)
     }
     request.onerror = function () {
-        strings(t++)
+        gstrings(t++)
     }
 }
