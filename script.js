@@ -53,5 +53,13 @@ async function gstrings(t) {
         document.documentElement.lang = langCode
         document.querySelectorAll(".l18n").forEach(e => e.innerHTML = strings[e.innerHTML] || e.innerHTML)
         document.querySelectorAll(".l18nP").forEach(e => e.placeholder = strings[e.placeholder] || e.placeholder)
+        document.querySelectorAll(".languagediv>*").forEach(e => {
+            e.setAttribute("tabindex", "0")
+            if (e.getAttribute("onclick").slice(24, 29).split("'")[0] == langCode) {
+                e.style.backgroundColor = "var(--transparent)"
+                e.style.color = "var(--background)"
+                document.getElementById("languagediv").append(e)
+            }
+        })
     }
 }

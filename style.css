@@ -48,7 +48,7 @@ div {
     align-items: center;
 }
 
-#ph, #credit {
+#ph {
     margin-top: 50px;
     color: var(--transparent);
 }
@@ -73,7 +73,7 @@ div {
     max-width: 90vw;
     border: 1px solid var(--foreground);
     color: var(--foreground);
-    font-size: clamp(15px, 1vw, 40px);
+    font-size: 16px;
     border-radius: 4px;
     margin: 5px;
     transition: max-height 0.25s, padding 0.25s, margin 0.25s, border 0.25s;
@@ -82,13 +82,20 @@ div {
 .languagediv>* {
     border-radius: 4px;
     padding: 10px;
-    transition: padding 0.25s, background-color 0.25s, color 0.25s;
+    transition: padding 0.25s, background-color 0.25s, color 0.25s, box-shadow 0.25s;
+    cursor: pointer;
+    box-shadow: none;
 }
 
 .languagediv>*:hover {
     background-color: var(--accent);
     color: var(--background);
     padding: 10px 20px;
+}
+
+.languagediv>*:focus {
+    box-shadow: inset 0px 0px 0px 3px #93d99670;
+    outline: none;
 }
 
 #error {
@@ -103,18 +110,10 @@ div {
     text-overflow: ellipsis;
 }
 
-#credit {
-    position: absolute;
-    left: 5px;
-    top: 5px;
-    margin: 0;
-    font-size: clamp(12px, 0.8vw, 30px);
-}
-
 input, button, select {
     font-family: 'Montserrat', arial, sans-serif;
     font-weight: 400;
-    font-size: clamp(15px, 1vw, 40px);
+    font-size: 16px;
     padding: 10px 15px;
     border-radius: 4px;
     margin: 5px;
@@ -164,20 +163,6 @@ select {
     background: transparent;
     color: var(--foreground);
     margin: 0;
-}
-
-#lang-b {
-    display: flex;
-    gap: 10px;
-    background: var(--transparent);
-    color: var(--accent);
-    position: absolute;
-    right: 0;
-    bottom: 0;
-    width: 100vw;
-    height: 100vh;
-    margin: 0;
-    border-radius: 4px;
 }
 
 svg {

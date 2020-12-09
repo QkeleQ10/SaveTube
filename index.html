@@ -47,7 +47,7 @@
         </select>
         <button id="convert-button">
             <svg xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 4000 4000"
-                style="height: clamp(10px, 0.8vw, 30px); transform: rotate(-45deg);">
+                style="height: 13px; transform: rotate(-45deg);">
                 <polygon
                     points="3425.32 1381.28 2406.36 2400.23 2406.36 44.04 1593.64 44.04 1593.64 2400.23 574.68 1381.28 0 1955.96 2000 3955.96 4000 1955.96 3425.32 1381.28" />
             </svg> <span class="l18n">Convert</span>
@@ -59,10 +59,12 @@
         <p id="error">An unknown error occurred.</p>
     </div>
 
+    <p id="ph" class="l18n">This tool was made by Quinten Althues</p>
+
     <div style="display: flex; flex-direction: column;">
-        <button id="languagebutton" onclick="document.getElementById('languagediv').classList.toggle('collapsed');"><svg
+        <button id="languagebutton" onclick="document.getElementById('languagediv').classList.toggle('collapsed'); document.getElementById('languagediv').children[0].focus()"><svg
                 id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 4000 4000"
-                style="height: clamp(10px, 0.8vw, 30px);">
+                style="height: 13px">
                 <path d="M3200,800V2764.94l-383.94-172L2660,2523H800V800H3200M4000,0H0V3323H2489l1511,677V0Z" />
             </svg> <span class="l18n">Language</span>
         </button>
@@ -77,9 +79,6 @@
             <div onclick="document.cookie = 'lang=em'; document.location.reload()">Emoji</div>
         </div>
     </div>
-
-    <p id="ph" class="l18n">There will eventually be more content on this page.</p>
-    <p id="credit">Quinten Althues 2020</p>
 
 </body>
 
