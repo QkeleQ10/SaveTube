@@ -47,13 +47,11 @@ async function gstrings(t) {
     request.open('GET', requestURL)
     request.responseType = 'json'
     request.send()
-    request.onload = function () {
+    request.onloadend = function () {
+        if (!strings || request.status == 404) gstrings(t + 1)
         strings = request.response
         document.documentElement.lang = langCode
         document.querySelectorAll(".l18n").forEach(e => e.innerHTML = strings[e.innerHTML] || e.innerHTML)
         document.querySelectorAll(".l18nP").forEach(e => e.placeholder = strings[e.placeholder] || e.placeholder)
-    }
-    request.onerror = function () {
-        gstrings(t++)
     }
 }
