@@ -68,6 +68,9 @@ div {
     display: inline-flex;
     width: fit-content;
     flex-wrap: nowrap;
+    justify-content: flex-start;
+    overflow-x: auto;
+    max-width: 90vw;
     border: 1px solid var(--foreground);
     color: var(--foreground);
     font-size: clamp(15px, 1vw, 40px);
@@ -154,6 +157,7 @@ button {
 select {
     cursor: pointer;
     padding: 9px 15px;
+    max-width: 99vw;
 }
 
 .lang-button {
