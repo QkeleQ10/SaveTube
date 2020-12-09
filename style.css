@@ -48,7 +48,7 @@ div {
     align-items: center;
 }
 
-#ph {
+p {
     margin-top: 50px;
     color: var(--transparent);
 }
@@ -157,12 +157,6 @@ select {
     cursor: pointer;
     padding: 9px 15px;
     max-width: 99vw;
-}
-
-.lang-button {
-    background: transparent;
-    color: var(--foreground);
-    margin: 0;
 }
 
 svg {
