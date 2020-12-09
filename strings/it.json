@@ -1,9 +1,9 @@
 {
     "e": {
-        "inv": "Invalid URL.",
-        "none": "No URL provided.",
-        "unav": "That video is unavailable.",
-        "e": "An unknown error occurred."
+        "inv": "URL invalido.",
+        "none": "Nessun URL Specificato.",
+        "unav": "Il video non è disponibile.",
+        "e": "Si è verificato un errore sconosciuto."
     },
     "Paste a YouTube URL here": "Incolla un URL di YouTube qui",
     "Video and audio": "Video e audio",
