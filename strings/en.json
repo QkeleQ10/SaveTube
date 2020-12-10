@@ -1,14 +1,14 @@
 {
     "e": {
-        "inv": "Invalid URL.",
-        "none": "No URL provided.",
-        "unav": "That video is unavailable.",
-        "e": "An unknown error occurred."
+        "inv": "crwdns5498:0crwdne5498:0",
+        "none": "crwdns5500:0crwdne5500:0",
+        "unav": "crwdns5502:0crwdne5502:0",
+        "e": "crwdns5504:0crwdne5504:0"
     },
-    "Paste a YouTube URL here": "Paste a YouTube URL here",
-    "Video and audio": "Video and audio",
-    "Just audio": "Just audio",
-    "Just video": "Just video",
-    "Convert": "Convert",
-    "Language": "Language"
+    "Paste a YouTube URL here": "crwdns1740:0crwdne1740:0",
+    "Video and audio": "crwdns1742:0crwdne1742:0",
+    "Just audio": "crwdns1744:0crwdne1744:0",
+    "Just video": "crwdns5492:0crwdne5492:0",
+    "Convert": "crwdns1746:0crwdne1746:0",
+    "Language": "crwdns5542:0crwdne5542:0"
 }
