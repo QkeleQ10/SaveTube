@@ -1,14 +1,14 @@
 <svg id="Layer_1" data-name="Layer 1"
-    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 4000 4000">
-    <style>
+  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 4000 4000">
+  <style>
     polygon {
-      fill: #6b6e6b;
+      fill: #629464;
     }
     @media (prefers-color-scheme: dark) {
       polygon {
         fill: #93d996;
       }
     }
-    </style>
-    <polygon points="3425.32 1381.28 2406.36 2400.23 2406.36 44.04 1593.64 44.04 1593.64 2400.23 574.68 1381.28 0 1955.96 2000 3955.96 4000 1955.96 3425.32 1381.28"/>
+  </style>
+  <polygon points="3425.32 1381.28 2406.36 2400.23 2406.36 44.04 1593.64 44.04 1593.64 2400.23 574.68 1381.28 0 1955.96 2000 3955.96 4000 1955.96 3425.32 1381.28"/>
 </svg>
