@@ -10,5 +10,6 @@
     "Just audio": "Jus adio",
     "Just video": "Jus vdio",
     "Convert": "Cvertn",
-    "Language": "Langag"
+    "Language": "Langag",
+    "This tool was made by Quinten Althues.": "This tool was made by %dev%."
 }

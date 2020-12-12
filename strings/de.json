@@ -10,5 +10,6 @@
     "Just audio": "Nur Audio",
     "Just video": "Just video",
     "Convert": "Konvertieren",
-    "Language": "Sprache"
+    "Language": "Sprache",
+    "This tool was made by Quinten Althues.": "This tool was made by %dev%."
 }

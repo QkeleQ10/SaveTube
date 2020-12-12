@@ -10,5 +10,6 @@
     "Just audio": "Alleen geluid",
     "Just video": "Alleen beeld",
     "Convert": "Converteren",
-    "Language": "Talen"
+    "Language": "Talen",
+    "This tool was made by Quinten Althues.": "Deze tool is ontwikkeld door %dev%."
 }
