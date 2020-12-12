@@ -10,5 +10,6 @@
     "Just audio": "Hanya audio",
     "Just video": "Hanya Video",
     "Convert": "Ubah",
-    "Language": "Bahasa"
+    "Language": "Bahasa",
+    "This tool was made by Quinten Althues.": "This tool was made by %dev%."
 }
