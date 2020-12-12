@@ -51,7 +51,7 @@ async function gstrings(t) {
         if (!strings || request.status == 404) gstrings(t + 1)
         strings = request.response
         document.documentElement.lang = langCode
-        document.querySelectorAll(".l18n").forEach(e => e.innerHTML = strings[e.innerHTML] || e.innerHTML)
+        document.querySelectorAll(".l18n").forEach(e => e.innerHTML = strings[e.innerHTML].replace("%dev%", "Quinten Althues").replace("%support%", "undefined") || e.innerHTML)
         document.querySelectorAll(".l18nP").forEach(e => e.placeholder = strings[e.placeholder] || e.placeholder)
         document.querySelectorAll(".languagediv>*").forEach(e => {
             e.setAttribute("tabindex", "0")
