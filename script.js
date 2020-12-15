@@ -42,7 +42,7 @@ async function gstrings(t) {
     langCode = langCookie || window.navigator.language || "en"
     if (t > 1) langCode = window.navigator.language.split("-")[0] || "en"
     if (t > 2) langCode = "en"
-    let requestURL = "https://qkeleq10.github.io/SaveTube/strings/" + langCode + ".json"
+    let requestURL = "https://raw.githubusercontent.com/QkeleQ10/Localisation/master/strings/" + langCode + ".json"
     let request = new XMLHttpRequest()
     request.open('GET', requestURL)
     request.responseType = 'json'
