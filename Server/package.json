@@ -1,7 +1,8 @@
 {
   "name": "savetube",
   "version": "1.0.0",
-  "description": "",
+  "description": "Download your favourite YouTube videos for free, quickly and easily.",
+  "repository": "github:QkeleQ10/SaveTube",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
