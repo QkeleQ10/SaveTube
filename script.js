@@ -1,38 +1,42 @@
-const convertBtn = document.getElementById('convert-button')
-const URLinput = document.getElementById('URL-input')
-const ext = document.getElementById('extension')
-let strings = {}
-let langCode = "en"
+const elmBtn = document.getElementById('convert-button'),
+    elmURL = document.getElementById('URL-input'),
+    elmExt = document.getElementById('extension'),
+    elmErr = document.getElementById('toast1')
+let strings = {},
+    langCode = "en"
 
 gstrings(1)
 
-convertBtn.addEventListener('click', () => {
-    convertBtn.style.opacity = "0.5"
-    convertBtn.style.pointerEvents = "none"
+elmBtn.addEventListener('click', () => {
+    elmBtn.style.opacity = "0.5"
+    elmBtn.style.pointerEvents = "none"
 
-    if (/^(http(s)?:\/\/)?((w){3}.)?youtu(be|.be)?(\.com)?\/.+/igm.test(URLinput.value) && URLinput.value.length >= 18) {
-        sendURL(URLinput.value, ext.value)
+    if (/^(http(s)?:\/\/)?((w){3}.)?youtu(be|.be)?(\.com)?\/.+/igm.test(elmURL.value) && elmURL.value.length >= 18) {
+        sendURL(elmURL.value, elmExt.value)
     } else {
-        document.getElementById("toast1").classList.remove("collapsed")
+        elmErr.classList.remove("collapsed")
         if (strings.e) document.getElementById("error").innerHTML = strings.e.inv || "Invalid URL."
         else document.getElementById("error").innerHTML = "Invalid URL."
-        if (URLinput.value.length < 1) {
+        if (elmURL.value.length < 1) {
             if (strings.e) document.getElementById("error").innerHTML = strings.e.none || "No URL provided."
             else document.getElementById("error").innerHTML = "No URL provided."
         }
         setTimeout(() => {
-            convertBtn.style.opacity = "unset"
-            convertBtn.style.pointerEvents = "unset"
-            document.getElementById("toast1").classList.add("collapsed")
+            elmBtn.style.opacity = "unset"
+            elmBtn.style.pointerEvents = "unset"
         }, 2000)
+
+        setTimeout(() => {
+            elmErr.classList.add("collapsed")
+        }, 10000)
     }
 })
 
 function sendURL(URL, ext) {
     window.location.href = `https://savetube.herokuapp.com/download?URL=${URL}&ext=${ext}`
     setTimeout(() => {
-        convertBtn.style.opacity = "unset"
-        convertBtn.style.pointerEvents = "unset"
+        elmBtn.style.opacity = "unset"
+        elmBtn.style.pointerEvents = "unset"
     }, 10000)
 }
 
@@ -42,9 +46,8 @@ async function gstrings(t) {
     langCode = langCookie || window.navigator.language || "en"
     if (t > 1) langCode = window.navigator.language.split("-")[0] || "en"
     if (t > 2) langCode = "en"
-    let requestURL = "https://raw.githubusercontent.com/QkeleQ10/Localisation/master/strings/" + langCode + ".json"
     let request = new XMLHttpRequest()
-    request.open('GET', requestURL)
+    request.open('GET', `https://raw.githubusercontent.com/QkeleQ10/Localisation/master/strings/${langCode}.json`)
     request.responseType = 'json'
     request.send()
     request.onloadend = function () {

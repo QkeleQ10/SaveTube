@@ -41,9 +41,8 @@
 
         <input id="URL-input" placeholder="Paste a YouTube URL here" class="l18nP">
         <select id="extension">
-            <option value="va" class="l18n">Video and audio</option>
-            <option value="a" class="l18n">Just audio</option>
-            <option value="v" class="l18n">Just video</option>
+            <option value="mp4" class="l18n">Video and audio (mp4)</option>
+            <option value="mp3" class="l18n">Just audio (mp3)</option>
         </select>
         <button id="convert-button">
             <svg xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 4000 4000"
@@ -56,31 +55,8 @@
     </div>
 
     <div id="toast1" class="toast collapsed">
+        <p id="errorTitle">Error</p>
         <p id="error">An unknown error occurred.</p>
-    </div>
-
-    <p class="l18n">This tool was made by Quinten Althues.</p>
-
-    <div style="display: flex; flex-direction: column; margin-top: 50px;">
-        <button id="languagebutton"
-            onclick="document.getElementById('languagediv').classList.toggle('collapsed'); document.getElementById('languagediv').children[0].focus()"><svg
-                id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 4000 4000"
-                style="height: 13px">
-                <path d="M3200,800V2764.94l-383.94-172L2660,2523H800V800H3200M4000,0H0V3323H2489l1511,677V0Z" />
-            </svg> <span class="l18n">Language</span>
-        </button>
-        <div id="languagediv" class="languagediv collapsed">
-            <div onclick="document.cookie = 'lang=en'; document.location.reload()">English</div>
-            <div onclick="document.cookie = 'lang=nl'; document.location.reload()">Nederlands</div>
-            <div onclick="document.cookie = 'lang=de'; document.location.reload()">Deutsch</div>
-            <div onclick="document.cookie = 'lang=it'; document.location.reload()">Italiano</div>
-            <div onclick="document.cookie = 'lang=pt'; document.location.reload()">Português</div>
-            <div onclick="document.cookie = 'lang=pl'; document.location.reload()">Polski</div>
-            <div onclick="document.cookie = 'lang=id'; document.location.reload()">Bahasa Indonesia</div>
-            <div onclick="document.cookie = 'lang=ms'; document.location.reload()">Melayu</div>
-            <div onclick="document.cookie = 'lang=ib'; document.location.reload()">Inhale Banana</div>
-            <div onclick="document.cookie = 'lang=em'; document.location.reload()">Emoji</div>
-        </div>
     </div>
 
 </body>

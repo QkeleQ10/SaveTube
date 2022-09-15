@@ -1,4 +1,5 @@
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800&display=swap");
+
 :root {
     --foreground: #6b6e6b;
     --background: #f7f7f7;
@@ -18,15 +19,16 @@
 }
 
 * {
-    text-align: center;
     margin: 0;
-    transition: max-height 0.25s;
+    font-family: 'Montserrat', arial, sans-serif;
+    font-weight: 600;
 }
 
 body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     background: var(--background);
-    font-family: 'Montserrat', arial, sans-serif;
-    font-weight: 500;
 }
 
 #g {
@@ -40,7 +42,6 @@ body {
 h1 {
     color: var(--accent);
     font-size: clamp(30px, 8vw, 105px);
-    font-weight: 500;
 }
 
 div {
@@ -48,69 +49,27 @@ div {
     align-items: center;
 }
 
-p {
-    margin-top: 50px;
-    color: var(--transparent);
-}
-
-.toast, .languagediv {
-    display: flex;
+.toast {
     max-height: 50px;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-}
-
-.languagediv {
-    display: inline-flex;
-    width: fit-content;
-    flex-wrap: nowrap;
-    justify-content: flex-start;
-    overflow-x: auto;
-    max-width: 90vw;
-    border: 1px solid var(--foreground);
-    color: var(--foreground);
-    font-size: 16px;
-    border-radius: 4px;
-    margin: 5px;
-    transition: max-height 0.25s, padding 0.25s, margin 0.25s, border 0.25s;
-}
-
-.languagediv>* {
-    border-radius: 4px;
-    padding: 10px;
-    transition: padding 0.25s, background-color 0.25s, color 0.25s, box-shadow 0.25s;
-    cursor: pointer;
-    box-shadow: none;
-}
-
-.languagediv>*:hover {
-    background-color: var(--accent);
-    color: var(--background);
-    padding: 10px 20px;
-}
-
-.languagediv>*:focus {
-    box-shadow: inset 0px 0px 0px 3px #93d99670;
-    outline: none;
-}
-
-#error {
     width: 30em;
     color: var(--background);
     background-color: var(--error);
     padding: 10px 15px;
     border-radius: 4px;
     margin: 5px;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
+    transition: max-height 0.25s;
 }
 
-input, button, select {
+#errorTitle {
+    font-size: small;
+    font-weight: 700;
+    text-transform: uppercase;
+    opacity: 0.75;
+}
+
+input,
+button,
+select {
     font-family: 'Montserrat', arial, sans-serif;
     font-weight: 400;
     font-size: 16px;
@@ -124,7 +83,8 @@ input, button, select {
     transition: box-shadow 0.2s, border 0.2s;
 }
 
-input:hover, select:hover {
+input:hover,
+select:hover {
     border: 1px solid var(--accent);
 }
 
@@ -132,12 +92,15 @@ button:hover {
     border: 1px solid var(--foreground);
 }
 
-input:focus, button:focus, select:focus {
+input:focus,
+button:focus,
+select:focus {
     box-shadow: 0px 0px 0px 3px #93d99670;
     outline: none;
 }
 
-input, select {
+input,
+select {
     width: 30em;
     text-align: left;
     border: 1px solid var(--foreground);
@@ -163,7 +126,9 @@ svg {
     fill: currentColor;
 }
 
-.collapsed, .collapsed:focus, .collapsed:hover {
+.collapsed,
+.collapsed:focus,
+.collapsed:hover {
     max-height: 0px;
     padding-top: 0px;
     padding-bottom: 0px;
